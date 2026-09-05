@@ -5,7 +5,7 @@ a convolution-reverb tail from the kick itself, ducks that tail out of the way o
 every transient, and mixes it back underneath.
 
 **[Download](https://github.com/ThekareemOne/royal-rumble/releases/latest)** &nbsp;·&nbsp;
-**[royal-rumble.netlify.app](https://royal-rumble.netlify.app)**
+**[royalrumble.bykarimhisham.com](https://royalrumble.bykarimhisham.com)**
 
 VST3 + AU + Standalone. macOS (universal) and Windows (x64). Built with JUCE 8.
 
