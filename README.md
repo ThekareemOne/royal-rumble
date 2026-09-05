@@ -4,8 +4,8 @@ Techno kick-rumble plugin. Insert it on a kick track: it detects each hit, build
 a convolution-reverb tail from the kick itself, ducks that tail out of the way on
 every transient, and mixes it back underneath.
 
-**[Download](https://github.com/__REPO__/releases/latest)** &nbsp;·&nbsp;
-**[Landing page](https://__USER__.github.io/__NAME__/)**
+**[Download](https://github.com/karimhisham/royal-rumble/releases/latest)** &nbsp;·&nbsp;
+**[royal-rumble.netlify.app](https://royal-rumble.netlify.app)**
 
 VST3 + AU + Standalone. macOS (universal) and Windows (x64). Built with JUCE 8.
 
@@ -117,6 +117,20 @@ It also writes `kick_dry.wav` and `kick_rumble.wav` for listening.
 **AGPLv3.** JUCE 8 is dual-licensed AGPLv3 or commercial, and this project takes
 the copyleft option — which is what permits building with the JUCE splash screen
 disabled. Embedded fonts are SIL OFL 1.1. See [THIRD-PARTY.md](THIRD-PARTY.md).
+
+## Landing page
+
+`docs/` is a static site deployed to Netlify (`netlify.toml` sets the publish
+directory; there is no build step). The hero faceplate is generated from the
+same theme source as `design/Main.dc.html`, so the page cannot drift from the
+plugin — regenerate both with:
+
+```sh
+cd design && python3 build_royal.py && python3 build_landing.py
+```
+
+`REPO` and `SITE` at the top of `design/build_landing.py` are the only two
+values to change if the repo or domain moves.
 
 ## Design
 

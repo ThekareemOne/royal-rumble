@@ -6,7 +6,10 @@ spec = importlib.util.spec_from_file_location("br", "build_royal.py")
 br = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(br)          # defines shell(), L, ORN_L
 
-REPO = "__REPO__"                    # e.g. karimhisham/royal-rumble
+# --- edit these two if they change ------------------------------------------
+REPO = "karimhisham/royal-rumble"      # GitHub repo hosting the release binaries
+SITE = "https://royal-rumble.netlify.app"   # set to your custom subdomain once DNS is live
+# -----------------------------------------------------------------------------
 faceplate = br.shell(br.L, br.ORN_L)
 
 CONTROLS = [
@@ -30,7 +33,23 @@ HTML = '''<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Royal Rumble — kick tail generator</title>
-<meta name="description" content="A техно kick-rumble plugin. Detects each kick, generates a convolution reverb tail, ducks it against the kick, and mixes it underneath. VST3 and AU, macOS and Windows.">
+<meta name="description" content="A techno kick-rumble plugin. Detects each kick, generates a convolution reverb tail, ducks it against the kick, and mixes it underneath. VST3 and AU, macOS and Windows.">
+<link rel="canonical" href="__SITE__/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Royal Rumble">
+<meta property="og:title" content="Royal Rumble — kick tail generator">
+<meta property="og:description" content="Convolution rumble, ducked against your kick. VST3 and AU for macOS and Windows. Free and open source.">
+<meta property="og:url" content="__SITE__/">
+<meta property="og:image" content="__SITE__/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Royal Rumble — kick tail generator">
+<meta name="twitter:description" content="Convolution rumble, ducked against your kick. VST3 and AU for macOS and Windows.">
+<meta name="twitter:image" content="__SITE__/og.png">
+<meta name="theme-color" content="#d3d0c9">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
@@ -119,7 +138,8 @@ footer a{color:#c2560c}
     <a class="btn" href="https://github.com/__REPO__/releases/latest/download/RoyalRumble-Windows.zip">
       <strong>Download for Windows</strong><span>VST3 &middot; x64</span></a>
     <span class="src"><a href="https://github.com/__REPO__">Source on GitHub</a> &middot;
-      <a href="https://github.com/__REPO__/releases">All releases</a></span>
+      <a href="https://github.com/__REPO__/releases">All releases</a> &middot;
+      <span title="Requires a release to have been published">AGPLv3</span></span>
   </div>
 
   <div class="plate-frame"><div class="plate-inner">__FACEPLATE__</div></div>
@@ -214,7 +234,7 @@ cmake --build build -j8</pre></div>
 out = (HTML.replace("__FACEPLATE__", faceplate)
            .replace("__ROWS__", rows)
            .replace("__REPO__", REPO)
-           .replace("техно", "techno"))
+           .replace("__SITE__", SITE.rstrip("/")))
 d = pathlib.Path("../docs"); d.mkdir(exist_ok=True)
 (d / "index.html").write_text(out)
 print("docs/index.html written, %d bytes" % len(out))

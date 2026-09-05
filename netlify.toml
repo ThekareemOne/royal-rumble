@@ -1,0 +1,50 @@
+# Netlify: the landing page is static, no build step.
+# Set the custom subdomain in Netlify's UI (Site settings > Domain management)
+# and point a CNAME at the site — neither can be configured from this file.
+
+[build]
+  publish = "docs"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options        = "SAMEORIGIN"
+    Referrer-Policy        = "strict-origin-when-cross-origin"
+
+# Fonts and the page itself are the only assets; let the page revalidate but
+# cache the immutable bits hard.
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Short download URLs that always resolve to the newest release.
+[[redirects]]
+  from = "/download/mac"
+  to   = "https://github.com/karimhisham/royal-rumble/releases/latest/download/RoyalRumble-macOS.zip"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/download/windows"
+  to   = "https://github.com/karimhisham/royal-rumble/releases/latest/download/RoyalRumble-Windows.zip"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/source"
+  to   = "https://github.com/karimhisham/royal-rumble"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/releases"
+  to   = "https://github.com/karimhisham/royal-rumble/releases"
+  status = 302
+  force = true
