@@ -1,0 +1,46 @@
+{
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 900,
+      "h": 520,
+      "title": "Royal Rumble - faceplate"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "note-built",
+      "x": 960,
+      "y": 0,
+      "w": 340,
+      "text": "BUILT AND RUNNING\nThis mirrors the shipping plugin, not a mockup. Chakra Petch for the wordmark and labels, JetBrains Mono for numerics - both embedded in the binary."
+    },
+    {
+      "id": "note-controls",
+      "x": 960,
+      "y": 175,
+      "w": 340,
+      "text": "EIGHT CONTROLS, THREE TIERS\nLarge 116px: LENGTH, DUCK, AMOUNT - the ones you reach for.\nMedium 86px: TONE, DRIVE, RELEASE.\nSmall 66px, dimmed: SPACE, HPF - set and forget.\nGrouped TAIL / FILTER / DUCK / OUTPUT, which is signal order."
+    },
+    {
+      "id": "note-scope",
+      "x": 960,
+      "y": 400,
+      "w": 340,
+      "text": "THE DISPLAY\nReal scope data off the engine, not a graphic. Orange is the ducked output, the dashed line is the raw tail before ducking - the gap between them is the duck doing its work."
+    },
+    {
+      "id": "note-name",
+      "x": 0,
+      "y": 560,
+      "w": 470,
+      "text": "Royal Rumble is a live WWE trademark. Fine for a personal tool, not a name this could be released under. No WWE assets are used anywhere - only the wordmark would need to change."
+    }
+  ],
+  "launch": {
+    "view": "focused",
+    "file": "Main.dc.html"
+  }
+}

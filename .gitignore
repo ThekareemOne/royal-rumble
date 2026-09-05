@@ -1,0 +1,18 @@
+# Local JUCE checkout - CMake fetches it when absent
+/JUCE
+
+# Build output
+/build
+/build-*
+
+# Rendered test audio (regenerate with the RoyalRumbleTest target)
+test/*.wav
+
+# Seeded design canvas: ~2.5 MB of editor payload, rebuilt by build_royal.py
+design/royal-rumble-ui.html
+
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
