@@ -27,24 +27,24 @@
 # Short download URLs that always resolve to the newest release.
 [[redirects]]
   from = "/download/mac"
-  to   = "https://github.com/karimhisham/royal-rumble/releases/latest/download/RoyalRumble-macOS.zip"
+  to   = "https://github.com/ThekareemOne/royal-rumble/releases/latest/download/RoyalRumble-macOS.zip"
   status = 302
   force = true
 
 [[redirects]]
   from = "/download/windows"
-  to   = "https://github.com/karimhisham/royal-rumble/releases/latest/download/RoyalRumble-Windows.zip"
+  to   = "https://github.com/ThekareemOne/royal-rumble/releases/latest/download/RoyalRumble-Windows.zip"
   status = 302
   force = true
 
 [[redirects]]
   from = "/source"
-  to   = "https://github.com/karimhisham/royal-rumble"
+  to   = "https://github.com/ThekareemOne/royal-rumble"
   status = 302
   force = true
 
 [[redirects]]
   from = "/releases"
-  to   = "https://github.com/karimhisham/royal-rumble/releases"
+  to   = "https://github.com/ThekareemOne/royal-rumble/releases"
   status = 302
   force = true

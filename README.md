@@ -4,7 +4,7 @@ Techno kick-rumble plugin. Insert it on a kick track: it detects each hit, build
 a convolution-reverb tail from the kick itself, ducks that tail out of the way on
 every transient, and mixes it back underneath.
 
-**[Download](https://github.com/karimhisham/royal-rumble/releases/latest)** &nbsp;·&nbsp;
+**[Download](https://github.com/ThekareemOne/royal-rumble/releases/latest)** &nbsp;·&nbsp;
 **[royal-rumble.netlify.app](https://royal-rumble.netlify.app)**
 
 VST3 + AU + Standalone. macOS (universal) and Windows (x64). Built with JUCE 8.

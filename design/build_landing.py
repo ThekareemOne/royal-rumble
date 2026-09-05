@@ -7,7 +7,7 @@ br = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(br)          # defines shell(), L, ORN_L
 
 # --- edit these two if they change ------------------------------------------
-REPO = "karimhisham/royal-rumble"      # GitHub repo hosting the release binaries
+REPO = "ThekareemOne/royal-rumble"      # GitHub repo hosting the release binaries
 SITE = "https://royal-rumble.netlify.app"   # set to your custom subdomain once DNS is live
 # -----------------------------------------------------------------------------
 faceplate = br.shell(br.L, br.ORN_L)
