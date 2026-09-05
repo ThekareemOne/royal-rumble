@@ -24,11 +24,6 @@ that (CI does).
 macOS builds are universal by default. For quicker local builds:
 `-DCMAKE_OSX_ARCHITECTURES=arm64`.
 
-> **Name:** "Royal Rumble" is a live WWE trademark. Fine for a personal tool,
-> not a name this could be released under. The artwork uses no WWE assets — the
-> theme is built from generic royal/championship vocabulary — so only the
-> wordmark would need to change if it ever shipped.
-
 ## Controls
 
 Eight knobs in four functional groups, sized in three tiers so the ones you
